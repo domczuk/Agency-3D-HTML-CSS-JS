@@ -79,9 +79,7 @@ h2 {
 
 /* Sidebar Section Styles */
 
-.sidebar_menu {
-
-}
+.sidebar_menu {}
 
 .sidebar {
     height: 100%;
@@ -96,7 +94,8 @@ h2 {
     padding-top: 60px;
 }
 
-.sidebar__link, .closebtn {
+.sidebar__link,
+.closebtn {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -105,7 +104,8 @@ h2 {
     transition: 0.3s;
 }
 
-.sidebar__link:hover, .closebtn {
+.sidebar__link:hover,
+.closebtn {
     color: #f1f1f1;
 }
 
@@ -461,6 +461,7 @@ h2 {
 .features__box__container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    padding: 5rem 1rem;
 }
 
 /* Feature Box */
@@ -513,15 +514,23 @@ h2 {
 }
 
 /* Reverse Modifier */
+
+
 .--reverse {
+    align-self: center;
     align-items: center;
 }
 
+.--reverse-heading {
+    margin-right: 2rem;
+}
+
 .--reverse-btn {
-    align-items: end;
-    width: 100%;
-    max-width: 400px;
+    align-items: start;
+    max-width: 500px;
     background-color: var(--background-color);
+    width: 100%;
+
 }
 
 .--reverse-image {
@@ -533,6 +542,10 @@ h2 {
     .features {
         height: fit-content;
         padding: 5rem 2rem;
+    }
+
+    .features__box__container {
+        padding: 0;
     }
 
     .features__box {
@@ -563,6 +576,10 @@ h2 {
 
     .--reverse__box {
         flex-direction: column-reverse;
+    }
+
+    .--reverse-heading {
+        margin-right: 0;
     }
 }
 
