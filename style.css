@@ -1,0 +1,756 @@
+/* Global Styles */
+:root {
+    /* Color variables */
+    --background-color: #8161e0;
+    --heading-color: #666666;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+/* Resetting some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    background: linear-gradient(45deg, var(--background-color) 0%, var(--background-color) 50%, #7350dd 50%, #7350dd 100%);
+    font-family: 'Poppins', sans-serif;
+    height: fit-content;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Headings */
+h1 {
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 500;
+    border: 2.5px solid var(--white-color);
+    padding: 0.9rem 3rem;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+/* Header Styles */
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    padding: 10rem 1rem;
+}
+
+.header__content__text {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+.header__primary__heading {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.header__btn {
+    margin-top: 2rem;
+}
+
+/* Header */
+
+/* Sidebar Section Styles */
+
+.sidebar_menu {
+
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar__link, .closebtn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar__link:hover, .closebtn {
+    color: #f1f1f1;
+}
+
+.is-active {
+    color: var(--background-color);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.open__sidebar__box {
+    position: absolute;
+    top: 1%;
+    left: 0;
+}
+
+.open__btn {
+    font-size: 4rem;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Sidebar Section Styles */
+
+
+/* Main Section Styles */
+.main {
+    background-color: #ffffffff;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.main__grid__container {
+    background-color: #fff;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+}
+
+.main__grid__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 4rem;
+    width: 100%;
+}
+
+.main__icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+.main__grid__card__primary__heading {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.main__grid__card__content__text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .header__primary__heading {
+        font-size: 2.5rem;
+    }
+
+    .header__content__text,
+    .main__grid__card__content__text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .main {
+        height: fit-content;
+    }
+
+    .main__grid__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 625px) {
+    .main__grid__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Information (Info) */
+.info {
+    background-color: #ffffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Information Background (Info Background) */
+.info__background {
+    background-image: url(white-abstract-3d-sphere-ball-geometric-vector-background-round-shape-texture-pattern-design-futuristic-space-concept-with-sift-air-bubble-element-dynamic-flying-molecular-cosmetic-display-scene.jpg);
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 55vh;
+    max-width: 100%;
+}
+
+/* Information Container (Info Container) */
+.info__container {
+    text-align: center;
+    height: fit-content;
+}
+
+/* Information Content (Info Content) */
+.info__content__box {
+    padding: 1rem;
+    max-width: 65%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 1rem;
+}
+
+/* Information Content Primary Heading (Info Content Primary Heading) */
+.info__content__box__primary__heading {
+    font-weight: 400;
+}
+
+/* Information Content Text (Info Content Text) */
+.info__content__box__primary__text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Information Statistics (Info Statistics) */
+.info__stat {
+    height: fit-content;
+    padding: 10rem 2rem;
+    max-width: 65%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    background-color: #fff;
+}
+
+/* Information Statistics Primary Heading (Info Statistics Primary Heading) */
+.info__stat__primary__heading {
+    font-weight: 400;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Information Statistics Primary Content (Info Statistics Primary Content) */
+.info__stat__primary__content {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 2.5rem;
+}
+
+/* Numbers (Numbers) */
+.info__numbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Numbers Box (Numbers Box) */
+.info__numbers__box {
+    padding: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.info__numbers__box::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 10%;
+    right: 0;
+    background-color: black;
+    width: 1px;
+    height: 80%;
+}
+
+.info__numbers__box:nth-of-type(5)::before {
+    display: none;
+}
+
+/* Numbers Box Number (Numbers Box Number) */
+.info__numbers__box__number {
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: var(--background-color);
+}
+
+/* Numbers Box Text (Numbers Box Text) */
+.info__numbers__box__text {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Responsive Web Design (RWD) - max-width: 1100px */
+@media (max-width: 1100px) {
+    .info__numbers {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        max-width: 900px;
+    }
+
+    .info__numbers__box::before {
+        display: none;
+    }
+
+    .alert__info__box {
+        height: fit-content;
+        padding: 1rem;
+    }
+
+    .alert__info__box__primary__text {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive Web Design (RWD) - max-width: 1000px */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .header__primary__heading {
+        font-size: 2.5rem;
+    }
+
+    .header__content__text,
+    .main__grid__card__content__text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive Web Design (RWD) - max-width: 630px */
+@media (max-width: 630px) {
+    .info__content__box__primary__text {
+        font-size: 1rem;
+    }
+
+    .info__stat {
+        padding: 3rem 2rem;
+    }
+
+    .info__stat__primary__heading {
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .info__stat__primary__content {
+        font-size: 1rem;
+    }
+}
+
+/* Alert */
+.alert__info__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 6rem 1rem;
+}
+
+/* Alert Primary Heading (Alert Primary Heading) */
+.alert__info__box__primary__heading {
+    font-weight: 600;
+    font-size: 2.5rem;
+    /* Text Color */
+    color: var(--white-color);
+}
+
+/* Alert Primary Text (Alert Primary Text) */
+.alert__info__box__primary__text {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    width: 50%;
+    /* Text Color */
+    color: var(--white-color);
+}
+
+/* Responsive Web Design (RWD) - max-width: 1100px (Alert) */
+@media (max-width: 1100px) {
+    .alert__info__box {
+        /* Adjust height for smaller screens */
+        height: fit-content;
+        padding: 1rem;
+    }
+
+    /* Full-width text for smaller screens */
+    .alert__info__box__primary__text {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+/* Alert End */
+
+/* Features */
+.features {
+    background-color: #ffffffff;
+}
+
+/* Features Box Container */
+.features__box__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Feature Box */
+.features__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Feature Box Images */
+.features__box__images {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Feature Image */
+.features__image {
+    width: 60%;
+}
+
+/* Feature Box Content */
+.features__box__content {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+/* Feature Box Primary Heading */
+.features__box__primary__heading {}
+
+/* Feature Box Primary Text */
+.features__box__primary__text {
+    margin-top: 2rem;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+/* Button */
+.features__btn {
+    background-color: black;
+    margin-top: 3rem;
+    display: block;
+    max-width: 250px;
+    text-align: center;
+}
+
+/* Reverse Modifier */
+.--reverse {
+    align-items: center;
+}
+
+.--reverse-btn {
+    align-items: end;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--background-color);
+}
+
+.--reverse-image {
+    justify-content: start;
+}
+
+/* Responsive Web Design (RWD) */
+@media (max-width: 1200px) {
+    .features {
+        height: fit-content;
+        padding: 5rem 2rem;
+    }
+
+    .features__box {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .features__box__content {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .features__box__primary__text {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .features__box__images {
+        width: 100%;
+    }
+
+    .features__image {
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .--reverse__box {
+        flex-direction: column-reverse;
+    }
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(45deg, #8161e0 0%, #8161e0 50%, #7350dd 50%, #7350dd 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10rem 1rem;
+}
+
+/* CTA Content Box */
+.cta__content__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CTA Primary Heading */
+.cta__content__box__primary__heading {
+    color: var(--white-color);
+    font-weight: 300;
+}
+
+/* CTA Primary Text */
+.cta__content__box__primary__text {
+    margin-top: 2rem;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 200;
+    width: 55%;
+    line-height: 40px;
+}
+
+/* CTA Input Box */
+.cta__input__box {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Input Label */
+.cta__label {
+    background: transparent;
+    border-radius: 25px;
+    border: 1px solid white;
+    display: flex;
+    height: 60px;
+    outline: none;
+}
+
+/* CTA Form */
+.cta__form {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 20px 70px;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+/* Input Placeholder */
+.cta__form::placeholder {
+    color: white;
+    font-weight: 200;
+    opacity: 0.2;
+}
+
+/* CTA Button */
+.cta__btn {
+    color: #7350dd;
+    font-weight: 600;
+    text-decoration: none;
+    background: white;
+    border-radius: 25px;
+    padding: 20px 40px;
+    margin-left: -2px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    line-height: 20px;
+    transition: 0.2s linear;
+}
+
+/* Button Hover Effect */
+.cta__btn:hover {
+    color: black;
+}
+
+/* RWD */
+@media (max-width: 1140px) {
+    .cta {
+        height: fit-content;
+        padding: 8rem 1rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .cta__content__box__primary__text {
+        width: 100%;
+    }
+
+    .cta__input__box {
+        flex-direction: column;
+    }
+
+    .cta__btn {
+        width: 60%;
+        margin: 1.5rem auto;
+    }
+
+    .cta__label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cta__form {
+        text-align: center;
+        padding: 0;
+        display: block;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .cta__btn {
+        width: 60%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 7rem 1rem;
+    position: relative;
+}
+
+/* Footer Container */
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+/* Footer Social Icon */
+.footer__social__link {
+    transition: 0.3s linear;
+    border: 2px solid white;
+    padding: 1.5rem;
+    background-color: #7350dd;
+    border-radius: 20px;
+}
+
+/* Social Icon Hover Effect */
+.footer__social__link:hover {
+    scale: 1.1;
+}
+
+/* Social Icon */
+.footer__social__icon {
+    display: block;
+    max-width: 100px;
+}
+
+/* RWD */
+@media (max-width: 850px) {
+    .footer {
+        height: fit-content;
+        padding: 6rem 1rem;
+    }
+
+    .footer__container {
+        justify-content: center;
+    }
+
+    .footer__social__icon {
+        max-width: 80px;
+    }
+
+}
