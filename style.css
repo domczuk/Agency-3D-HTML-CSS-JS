@@ -383,16 +383,16 @@ h2 {
     .main__grid__card__content__text {
         font-size: 1.2rem;
     }
+
+    .info__stat {
+        padding: 1rem 2rem;
+    }
 }
 
 /* Responsive Web Design (RWD) - max-width: 630px */
 @media (max-width: 630px) {
     .info__content__box__primary__text {
         font-size: 1rem;
-    }
-
-    .info__stat {
-        padding: 3rem 2rem;
     }
 
     .info__stat__primary__heading {
@@ -440,7 +440,7 @@ h2 {
     .alert__info__box {
         /* Adjust height for smaller screens */
         height: fit-content;
-        padding: 1rem;
+        padding: 2rem;
     }
 
     /* Full-width text for smaller screens */
@@ -510,32 +510,10 @@ h2 {
     margin-top: 3rem;
     display: block;
     max-width: 250px;
-    text-align: center;
 }
 
-/* Reverse Modifier */
 
 
-.--reverse {
-    align-self: center;
-    align-items: center;
-}
-
-.--reverse-heading {
-    margin-right: 2rem;
-}
-
-.--reverse-btn {
-    align-items: start;
-    max-width: 500px;
-    background-color: var(--background-color);
-    width: 100%;
-
-}
-
-.--reverse-image {
-    justify-content: start;
-}
 
 /* Responsive Web Design (RWD) */
 @media (max-width: 1200px) {
@@ -562,6 +540,7 @@ h2 {
     .features__box__primary__text {
         width: 100%;
         font-size: 1.3rem;
+        text-align: center;
     }
 
     .features__box__images {
@@ -572,14 +551,6 @@ h2 {
         margin: 0 auto;
         max-width: 400px;
         width: 100%;
-    }
-
-    .--reverse__box {
-        flex-direction: column-reverse;
-    }
-
-    .--reverse-heading {
-        margin-right: 0;
     }
 }
 
