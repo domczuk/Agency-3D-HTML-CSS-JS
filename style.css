@@ -493,6 +493,7 @@ h2 {
     flex-direction: column;
     align-items: start;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 /* Feature Box Primary Heading */
